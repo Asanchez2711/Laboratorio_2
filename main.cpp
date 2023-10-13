@@ -55,7 +55,7 @@ if(id=="admin"&&contrasena=="admin"){
 
 }
 else{
-    cout<<"Contrase�a invalida "<<endl;
+    cout<<"Contrasenia invalida "<<endl;
 
  system("pause");
     return -1;

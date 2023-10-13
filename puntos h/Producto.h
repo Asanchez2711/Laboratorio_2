@@ -1,36 +1,43 @@
-#ifndef PRODUCTO_H
-#define PRODUCTO_H
-
+//#ifndef PRODUCTO_H
+//#define PRODUCTO_H
+#pragma once
 
 #include <string>
 
-#include "Fecha.h"
+#include "puntos h/Fecha.h"
 //en caso de estar trabajando en vs recordar agregar el pragma once y borrar lo default de codebloks
 class Producto{
 
 private:
 
-    std::string _id;
+    int _id;
     float _precio;
     std::string _proveedor;
-    Fecha _fechaAlta;
+    class Fecha _fechaAlta;
     std::string _descripcion;
+    int _cantidad;
     bool _estado;
 
 public:
-    void set_id(std::string id);
+    void set_id(int id);
     void set_precio(float precio);
     void set_proveedor(std::string provedor);
     void setFechaAlta(int dia, int mes, int anio);
+    void setCantidad(int cantidad);
     void set_estado( bool estado);
 
-    std::string getId() const;
+    int getId() const;
     float getPrecio() const;
     std::string getProveedor() const;
-    Fecha getFechaAlta() const;
+    class Fecha getFechaAlta() const;
     std::string getDescripcion() const;
+    int getCantidad() const;
     bool getEstado() const;
+
+    void cargar();
+    void mostrar() const;
+    
 
     };
 
-#endif // PRODUCTO_H
+//#endif // PRODUCTO_H

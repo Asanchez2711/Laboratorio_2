@@ -66,23 +66,23 @@ Fecha::Fecha(int dia, int mes, int anio)
        // _anio=2023;
    // } else
     if(dia<1 || dia>31){
-        _dia=1;
+        _dia=-1;
         _mes=1;
         _anio=2023;
     } else if(dia>28 && mes==2 && anio%4!=0) {
-        _dia=1;
+        _dia=-1;
         _mes=1;
         _anio=2023;
     } else if(dia>29 && mes==2){
-        _dia=1;
+        _dia=-1;
         _mes=1;
         _anio=2023;
     } else if((dia>30 && mes==4)||(dia>30 && mes==6)||(dia>30 && mes==9)||(dia>30 && mes==11)){
-        _dia=1;
+        _dia=-1;
         _mes=1;
         _anio=2023;
     } else if(mes<0 || mes>12){
-        _dia=1;
+        _dia=-1;
         _mes=1;
         _anio=2023;
     } else {
@@ -113,31 +113,36 @@ void Fecha::AgregarDias(int dias)
     }
 }
 
-std::string Fecha::toString(Fecha fecha)
+string Fecha::toString()
 {
-   std::string dia= std::to_string(fecha._dia);
-   std::string mes= std::to_string(fecha._mes);
-   std::string anio= std::to_string(fecha._anio);
+   std::string dia= std::to_string(_dia);
+   std::string mes= std::to_string(_mes);
+   std::string anio= std::to_string(_anio);
    std::string fechaString;
 
-    if(fecha._dia<10 ){
+    if(_dia<10 ){
         dia="0"+dia;
     }
-    if(fecha._mes<10){
+    if(_mes<10){
         mes="0"+mes;
     }
     fechaString=dia+"/"+mes+"/"+anio;
 
-    return std::string(fechaString);
+    return fechaString;
 }
 
 void Fecha::setDia(int dia)
 {
-    _dia = dia;
+    if(dia>0 || dia<32){
+       _dia = dia; 
+    }
+    
 }
 void Fecha::setMes(int mes)
 {
-    _mes=mes;
+    if(mes>0 || mes<13){
+       _mes = mes; 
+    }
 }
 
 void Fecha::setAnio(int anio)
@@ -145,32 +150,61 @@ void Fecha::setAnio(int anio)
     _anio=anio;
 }
 
-int Fecha::getDia()
+int Fecha::getDia() const
 {
     return _dia;
 }
 
-int Fecha::getMes()
+int Fecha::getMes() const
 {
     return _mes;
 }
 
-int Fecha::getAnio()
+int Fecha::getAnio() const
 {
     return _anio;
 }
 
 void Fecha::cargar()
-{
+{   
+    int dia,mes,anio;
+
     cout<<"Ingrese dia: "<<endl;
-    cin>>_dia;
+    cin>>dia;
     cout<<"Ingrese mes: "<<endl;
-    cin>>_mes;
+    cin>>mes;
     cout<<"Ingrese anio: "<<endl;
-    cin>>_anio;
+    cin>>anio;
+
+    if(dia<1 || dia>31){
+        _dia=-1;
+        _mes=1;
+        _anio=2023;
+    } else if(dia>28 && mes==2 && anio%4!=0) {
+        _dia=-1;
+        _mes=1;
+        _anio=2023;
+    } else if(dia>29 && mes==2){
+        _dia=-1;
+        _mes=1;
+        _anio=2023;
+    } else if((dia>30 && mes==4)||(dia>30 && mes==6)||(dia>30 && mes==9)||(dia>30 && mes==11)){
+        _dia=-1;
+        _mes=1;
+        _anio=2023;
+    } else if(mes<0 || mes>12){
+        _dia=-1;
+        _mes=1;
+        _anio=2023;
+    } else {
+        _dia=dia;
+        _mes=mes;
+        _anio=anio;
+    }
+    
 }
 
-void Fecha::mostrar()
+void Fecha::mostrar() const
 {
     cout<<"El dia es: "<<_dia<<endl;
     cout<<"El mes es: "<<_mes<<endl;
