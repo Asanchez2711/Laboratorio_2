@@ -4,6 +4,9 @@
 
 using namespace std;
 
+#include "puntos h/Fecha.h"
+#include "puntos h/Producto.h"
+
 int main (){
 
 
@@ -52,7 +55,7 @@ if(id=="admin"&&contrasena=="admin"){
 
 }
 else{
-    cout<<"Contraseña invalida "<<endl;
+    cout<<"Contraseï¿½a invalida "<<endl;
 
  system("pause");
     return -1;
