@@ -22,9 +22,18 @@ void Empleado::setFechaDeAlta(Fecha fechaDeAlta)
 {
     _fechaDeAlta.cargar();
 }
+void Empleado::setTotalVendido(float totalVendido)
+{
+    _totalVendido=totalVendido;
+}
 void Empleado::setEstado(bool estado)
 {
     _estado=estado;
+}
+
+void Empleado::setTipo(bool tipo)
+{
+    _tipo=tipo;
 }
 
 int Empleado::getLegajo() const
@@ -47,6 +56,16 @@ Fecha Empleado::getFechaDeAlta() const
     return Fecha(_fechaDeAlta);
 }
 
+float Empleado::getTotalVendido() const
+{
+    return 0.0f;
+}
+
+bool Empleado::getTipo() const
+{
+    return _tipo;
+}
+
 bool Empleado::getEstado() const
 {
     return _estado;
@@ -61,7 +80,8 @@ void Empleado::cargar()
     cout<<"Ingrese apellido: "<<endl;
     cin>>_apellido;
     cout<<"Ingrese fecha de Alta de forma ordeada"<<endl;
-    _fechaDeAlta.cargar();        
+    _fechaDeAlta.cargar(); 
+          
 }
 
 void Empleado::mostrar() const
@@ -77,7 +97,7 @@ void Empleado::mostrar() const
         cout<<"El nombre es: "<<_nombre<<endl;
         cout<<"El apellido es: "<<_apellido<<endl;
         cout<<"La Fecha de Alta es: "<<_fechaDeAlta.toString(_fechaDeAlta);   
-        
+        cout<<"El total vendido hasta la fecha es: "<<_totalVendido<<endl;
         } else {
             cout<<"Producto ya no se encuentra"<<endl;
         }

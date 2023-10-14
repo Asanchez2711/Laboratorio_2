@@ -12,19 +12,27 @@ class Empleado{
         string _nombre;
         string _apellido;
         class Fecha _fechaDeAlta;
+        float _totalVendido;
         bool _estado;
+        bool _tipo;
 
     public:
+        Empleado(){_tipo=true;};
+
         void setLegajo(int legajo);
         void setNombre(string nombre);
         void setApellido(string apellido);
         void setFechaDeAlta(class Fecha fechaDeAlta);
+        void setTotalVendido(float totalVendido);
         void setEstado(bool estado);
+        void setTipo(bool tipo);
 
         int getLegajo() const;
         string getNombre() const;
         string getApellido() const;
         class Fecha getFechaDeAlta() const;
+        float getTotalVendido() const;
+        bool getTipo() const;
         bool getEstado() const;
         
         void cargar();

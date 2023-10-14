@@ -13,9 +13,13 @@ class Cliente:public Empleado{
     int _totalGastado;
 
     public:
+    Cliente(){setTipo(false);};
+
     void setTotalGastado(int totalGastado);
 
     int getTotalGastado() const;
+
+
 
     
 

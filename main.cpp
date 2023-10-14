@@ -12,6 +12,7 @@ int main (){
 
 string id,contrasena;
 
+int opcion;
 
     while(true){
 
@@ -32,7 +33,7 @@ system("cls");
 
 if(id=="admin"&&contrasena=="admin"){
 
-        int opcion;
+        
     cout<<endl;
     cout<<"Bienvenido admin "<<endl;
     cout<<endl;
@@ -60,6 +61,15 @@ else{
  system("pause");
     return -1;
 }
+    if(opcion==1){
+        while (true){
+            int opcionsub1;
+
+            
+
+
+        }
+    }
 
     }
  system("pause");
