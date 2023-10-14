@@ -13,7 +13,7 @@ class Cliente:public Empleado{
     int _totalGastado;
 
     public:
-    Cliente(){setTipo(false);};
+    Cliente();
 
     void setTotalGastado(int totalGastado);
 

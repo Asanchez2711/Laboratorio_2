@@ -25,6 +25,8 @@ private:
     bool _estado;
 
 public:
+    Producto();
+
     void set_id(int id);
     void set_precio(float precio);
     void set_proveedor(std::string provedor);

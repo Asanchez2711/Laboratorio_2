@@ -17,7 +17,7 @@ class Empleado{
         bool _tipo;
 
     public:
-        Empleado(){_tipo=true;};
+        Empleado();
 
         void setLegajo(int legajo);
         void setNombre(string nombre);
