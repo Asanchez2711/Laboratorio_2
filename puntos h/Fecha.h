@@ -20,7 +20,7 @@ class Fecha{
         Fecha(int dia,int mes,int anio);
 
         void AgregarDias(int dias);
-        std::string toString();
+        
 
         void setDia(int dia);
         void setMes(int mes);
@@ -32,6 +32,7 @@ class Fecha{
 
         void cargar();
         void mostrar() const;
+        std::string toString(Fecha fecha) const;
 };
 
 #endif // FECHA_H

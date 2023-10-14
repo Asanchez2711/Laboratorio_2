@@ -113,22 +113,22 @@ void Fecha::AgregarDias(int dias)
     }
 }
 
-string Fecha::toString()
+string Fecha::toString(Fecha fecha) const
 {
-   std::string dia= std::to_string(_dia);
-   std::string mes= std::to_string(_mes);
-   std::string anio= std::to_string(_anio);
+   string dia= std::to_string(fecha._dia);
+   std::string mes= std::to_string(fecha._mes);
+   std::string anio= std::to_string(fecha._anio);
    std::string fechaString;
 
-    if(_dia<10 ){
+    if(fecha._dia<10 ){
         dia="0"+dia;
     }
-    if(_mes<10){
+    if(fecha._mes<10){
         mes="0"+mes;
     }
     fechaString=dia+"/"+mes+"/"+anio;
 
-    return fechaString;
+    return string(fechaString);
 }
 
 void Fecha::setDia(int dia)

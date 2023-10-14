@@ -104,7 +104,7 @@ void Producto::set_id(int id) {
         cout<<"El ID es: "<<_id<<endl;
         cout<<"El Precio es: "<<_precio<<endl;
         cout<<"El Proveedor es: "<<_proveedor<<endl;
-        TO STRING//cout<<"La Fecha de Alta es: "<<endl;   
+        cout<<"La Fecha de Alta es: "<<_fechaAlta.toString(_fechaAlta);   
         cout<<"La Descripcion es: "<<_descripcion<<endl;
         cout<<"La cantidad es: "<<_cantidad<<endl;
         } else {

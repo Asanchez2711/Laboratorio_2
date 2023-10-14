@@ -4,7 +4,7 @@
 
 #include <string>
 
-#include "puntos h/Fecha.h"
+#include "Fecha.h"
 //en caso de estar trabajando en vs recordar agregar el pragma once y borrar lo default de codebloks
 class Producto{
 
