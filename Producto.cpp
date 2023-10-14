@@ -22,6 +22,26 @@ void Producto::setCantidad(int cantidad)
     _cantidad=cantidad;
 }
 
+void Producto::setColor(string color)
+{
+    _color=color;
+}
+
+void Producto::setTalle(string talle)
+{
+    _talle=talle;
+}
+
+void Producto::setMarca(string marca)
+{
+    _marca=marca;
+}
+
+void Producto::setTemporada(int temporada)
+{
+    _temporada=temporada;
+}
+
 void Producto::set_id(int id) {
         _id = id;
     }
@@ -68,6 +88,26 @@ void Producto::set_id(int id) {
         return _cantidad;
     }
 
+    string Producto::getColor() const
+    {
+        return string(_color);
+    }
+
+    string Producto::getTalle() const
+    {
+        return string(_talle);
+    }
+
+    string Producto::getMarca() const
+    {
+        return string(_marca);
+    }
+
+    int Producto::getTemporada() const
+    {
+        return _temporada;
+    }
+
     bool Producto::getEstado() const
     {
         return _estado;
@@ -85,6 +125,15 @@ void Producto::set_id(int id) {
         _fechaAlta.cargar();
         cout<<"Ingrese Cantidad: "<<endl;
         cin>>_cantidad;
+        cout<<"Ingrese color: "<<endl;
+        cin>>_color;
+        cout<<"Ingrese talle: "<<endl;
+        cin>>_talle;
+        cout<<"Ingrese marca: "<<endl;
+        cin>>_marca;
+        cout<<"Ingrese temporada: "<<endl;
+        cin>>_temporada;
+        
         //cout<<"Ingrese Estado (0)Inactivo, (1)Activo: "<<endl;
         //cin>>_estado;
         
@@ -107,6 +156,10 @@ void Producto::set_id(int id) {
         cout<<"La Fecha de Alta es: "<<_fechaAlta.toString(_fechaAlta);   
         cout<<"La Descripcion es: "<<_descripcion<<endl;
         cout<<"La cantidad es: "<<_cantidad<<endl;
+        cout<<"El color es: "<<_color<<endl;
+        cout<<"El talle es: "<<_talle<<endl;
+        cout<<"La marca es: "<<_marca<<endl;
+        cout<<"La temporada es: "<<_temporada<<endl;
         } else {
             cout<<"Producto ya no se encuentra"<<endl;
         }
