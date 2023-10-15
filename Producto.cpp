@@ -3,7 +3,7 @@
 using namespace std;
 
 
-#include "Producto.h"
+#include "puntos h/Producto.h"
 
 
 void Producto::setFechaAlta(int dia, int mes, int anio){

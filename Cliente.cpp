@@ -8,6 +8,7 @@ using namespace std;
 #include "puntos h/Cliente.h"
 
 
+
 void Cliente::setTotalGastado(int totalGastado)
 {
     _totalGastado=totalGastado;
@@ -16,5 +17,26 @@ void Cliente::setTotalGastado(int totalGastado)
 int Cliente::getTotalGastado() const
 {
     return _totalGastado;
+}
+
+void Cliente::Cargar(){
+    p.cargar();
+}
+void Cliente::Mostrar() const{
+    cout<<"El Estado es: ";
+        if(getEstado()==true){
+            cout<<"Activo"<<endl;
+        } else {
+            cout<<"Inactivo"<<endl;        
+        }
+        if(getEstado()==true){
+        cout<<"El Legajo es: "<<getLegajo()<<endl;
+        cout<<"El nombre es: "<<getNombre()<<endl;
+        cout<<"El apellido es: "<<getApellido()<<endl;
+        cout<<"La Fecha de Alta es: "<<_fechaDeAlta.toString(_fechaDeAlta);   
+        cout<<"El total vendido hasta la fecha es: "<<_totalGastado<<endl;
+        } else {
+        cout<<"Producto ya no se encuentra"<<endl;
+        }
 }
 //prueba haber el github

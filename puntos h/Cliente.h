@@ -5,21 +5,24 @@
 using namespace std;
 
 #include "Fecha.h"
-#include "Empleado.h"
+#include "Persona.h"
 
-class Cliente:public Empleado{
+class Cliente:public Persona{
 
     private: 
     int _totalGastado;
-
+    class Persona p;
     public:
     Cliente();
+
 
     void setTotalGastado(int totalGastado);
 
     int getTotalGastado() const;
 
+    void Cargar();
 
+    void Mostrar()const;
 
     
 

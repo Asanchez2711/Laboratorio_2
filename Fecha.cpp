@@ -1,8 +1,8 @@
-#include "Fecha.h"
+////#COMENTO ESTA PARTE PORQUE FIGURA QUE NO ENCUENTRA "Fecha.h" en el directorio
+//#include "Fecha.h"
 
 using namespace std;
-#include "Fecha.h"
-//#include <stdlib.h>
+#include "puntos h/Fecha.h"
 
 void Fecha::AgregarDia()
 {
