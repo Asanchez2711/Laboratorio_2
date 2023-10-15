@@ -1,4 +1,4 @@
-#pragma once
+
 #include <iostream>
 #include <string>
 #include "Producto.h"
@@ -13,9 +13,11 @@ class archivo_producto
         bool GuardarProducto();
         bool ListarProductos();
         int BuscarIdProducto();
-
+        archivo_producto(std::string nombre ){
+            _nombre=nombre;
+        }
 
     private:
 
-        std::string nombre;
+        std::string _nombre;
 };
