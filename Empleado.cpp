@@ -15,11 +15,6 @@ float Empleado::getTotalVendido() const
     return 0.0f;
 }
 
-void Empleado::cargar(){
-
-    p.cargar();
-}
-
 void Empleado::mostrar() const
 {
     cout<<"El Estado es: ";
