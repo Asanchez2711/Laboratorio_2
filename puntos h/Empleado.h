@@ -14,8 +14,7 @@ class Empleado{
         class Fecha _fechaDeAlta;
         float _totalVendido;
         bool _estado;
-        bool _tipo;
-
+        //PRUEBA
     public:
         Empleado();
 
@@ -25,14 +24,12 @@ class Empleado{
         void setFechaDeAlta(class Fecha fechaDeAlta);
         void setTotalVendido(float totalVendido);
         void setEstado(bool estado);
-        void setTipo(bool tipo);
 
         int getLegajo() const;
         string getNombre() const;
         string getApellido() const;
         class Fecha getFechaDeAlta() const;
         float getTotalVendido() const;
-        bool getTipo() const;
         bool getEstado() const;
         
         void cargar();
