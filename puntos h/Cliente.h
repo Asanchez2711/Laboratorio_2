@@ -11,7 +11,6 @@ class Cliente:public Persona{
 
     private: 
     int _totalGastado;
-    class Persona p;
     public:
     Cliente();
 
