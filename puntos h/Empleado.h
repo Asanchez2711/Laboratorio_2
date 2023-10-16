@@ -10,7 +10,7 @@ using namespace std;
 class Empleado:public Persona{
     private:
         class Fecha _fechaDeAlta;
-        class Persona p;
+
         float _totalVendido;
 
     public:
