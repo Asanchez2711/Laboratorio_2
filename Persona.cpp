@@ -1,5 +1,5 @@
 #include "puntos h/Persona.h"
-//PRUEBA
+//PRU
 #include "puntos h/Fecha.h"
 using namespace std;
 
