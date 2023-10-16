@@ -1,5 +1,6 @@
 #include "puntos h/Empleado.h"
 //#COMENTO ESTA PARTE PORQUE FIGURA QUE NO ENCUENTRA "Empleado.h" en el directorio
+//#PRUEBA
 //#include "Empleado.h"
 #include "puntos h/Fecha.h"
 
