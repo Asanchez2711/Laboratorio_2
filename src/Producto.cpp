@@ -1,11 +1,20 @@
-#include "puntos h/Producto.h"
+#include "Producto.h"
+
+#include <string>
+
 using namespace std;
-#include "puntos h/Fecha.h"
+
+
+
+
 void Producto::setFechaAlta(int dia, int mes, int anio){
 
         _fechaAlta.setDia(dia);
         _fechaAlta.setMes(mes);
         _fechaAlta.setAnio(anio);
+
+
+
 
 }
 
@@ -16,17 +25,20 @@ void Producto::setCantidad(int cantidad)
 
 void Producto::setColor(string color)
 {
-    _color=color;
+    strcpy(_color, color.c_str());
+    //_color=color;
 }
 
 void Producto::setTalle(string talle)
 {
-    _talle=talle;
+    strcpy(_talle, talle.c_str());
+   // _talle=talle;
 }
 
 void Producto::setMarca(string marca)
 {
-    _marca=marca;
+    strcpy(_marca, marca.c_str());
+    //_marca=marca;
 }
 
 void Producto::setTemporada(int temporada)
@@ -43,7 +55,8 @@ void Producto::set_id(int id) {
     }
 
     void Producto:: set_proveedor(std::string proveedor) {
-        _proveedor = proveedor;
+         strcpy(_proveedor, proveedor.c_str());
+        //_proveedor = proveedor;
     }
 
     void Producto::set_estado(bool estado){
@@ -112,40 +125,52 @@ void Producto::set_id(int id) {
         cout<<"Ingrese Precio: "<<endl;
         cin>>_precio;
         cout<<"Ingrese Proveedor: "<<endl;
-        cin>>_proveedor;
+        cin.ignore();
+        cin.getline(_proveedor, 30);
+        if(_proveedor[0]!='\0'){
         cout<<"Ingrese fecha de Alta de forma ordeada"<<endl;
         _fechaAlta.cargar();
+        cout<<endl;
+        }
+        cout<<"Ingrese la descripcion: "<<endl;
+        cin.ignore();
+        cin.getline(_descripcion, 30);
         cout<<"Ingrese Cantidad: "<<endl;
         cin>>_cantidad;
         cout<<"Ingrese color: "<<endl;
-        cin>>_color;
+        cin.ignore();
+        cin.getline(_color, 30);
         cout<<"Ingrese talle: "<<endl;
         cin>>_talle;
         cout<<"Ingrese marca: "<<endl;
-        cin>>_marca;
+        cin.ignore();
+        cin.getline(_marca, 30);
+
         cout<<"Ingrese temporada: "<<endl;
         cin>>_temporada;
-        
+        _estado=true;
+
         //cout<<"Ingrese Estado (0)Inactivo, (1)Activo: "<<endl;
         //cin>>_estado;
-        
+
     }
 
     void Producto::mostrar() const
 
-    {           
+    {
         cout<<"El Estado es: ";
         if(_estado==true){
             cout<<"Activo"<<endl;
         } else {
             cout<<"Inactivo"<<endl;
-        
+
         }
         if(_estado==true){
         cout<<"El ID es: "<<_id<<endl;
         cout<<"El Precio es: "<<_precio<<endl;
         cout<<"El Proveedor es: "<<_proveedor<<endl;
-        cout<<"La Fecha de Alta es: "<<_fechaAlta.toString(_fechaAlta);   
+        cout<<"La Fecha de Alta es: "<<_fechaAlta.toString(_fechaAlta);
+        cout<<endl;
         cout<<"La Descripcion es: "<<_descripcion<<endl;
         cout<<"La cantidad es: "<<_cantidad<<endl;
         cout<<"El color es: "<<_color<<endl;
@@ -155,8 +180,6 @@ void Producto::set_id(int id) {
         } else {
             cout<<"Producto ya no se encuentra"<<endl;
         }
-        
-    
-    }
 
-   
+
+    }

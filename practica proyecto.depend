@@ -1,0 +1,140 @@
+# depslib dependency file v1.0
+1697511914 source:c:\users\mathi\desktop\c++\practica proyecto\src\archivo_producto.cpp
+	"Producto.h"
+	"archivo_producto.h"
+	<iostream>
+	<string>
+
+1697511902 c:\users\mathi\desktop\c++\practica proyecto\include\archivo_producto.h
+	"Producto.h"
+	<iostream>
+	<string>
+
+1697587152 c:\users\mathi\desktop\c++\practica proyecto\include\producto.h
+	<string>
+	"Fecha.h"
+
+1697511509 c:\users\mathi\desktop\c++\practica proyecto\include\fecha.h
+	<iostream>
+	<string.h>
+
+1697511509 source:c:\users\mathi\desktop\c++\practica proyecto\src\fecha.cpp
+	"Fecha.h"
+
+1697587276 source:c:\users\mathi\desktop\c++\practica proyecto\src\producto.cpp
+	"Producto.h"
+	<string>
+
+1697584388 source:c:\users\mathi\desktop\c++\practica proyecto\main.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	"Fecha.h"
+	"Producto.h"
+	"archivo_producto.h"
+
+1697565994 source:c:\users\mathi\desktop\c++\practica proyecto\src\persona.cpp
+	"Persona.h"
+	"Fecha.h"
+	<string>
+
+1697566116 c:\users\mathi\desktop\c++\practica proyecto\include\persona.h
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1697566229 source:c:\users\mathi\desktop\c++\practica proyecto\src\cliente.cpp
+	"Cliente.h"
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1697566229 c:\users\mathi\desktop\c++\practica proyecto\include\cliente.h
+	<iostream>
+	<string>
+	"Fecha.h"
+	"Persona.h"
+
+1697566548 source:c:\users\mathi\desktop\c++\practica proyecto\src\empleado.cpp
+	"Empleado.h"
+	"Fecha.h"
+
+1697566652 c:\users\mathi\desktop\c++\practica proyecto\include\empleado.h
+	<iostream>
+	<string>
+	"Fecha.h"
+	"Persona.h"
+
+1697656881 source:c:\users\alejandro\desktop\laboratorio_2-main\main.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	"Fecha.h"
+	"Producto.h"
+	"archivo_producto.h"
+	"funciones.h"
+
+1697592023 c:\users\alejandro\desktop\laboratorio_2-main\include\fecha.h
+	<iostream>
+	<string.h>
+
+1697651018 c:\users\alejandro\desktop\laboratorio_2-main\include\producto.h
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1697650921 c:\users\alejandro\desktop\laboratorio_2-main\include\archivo_producto.h
+	"Producto.h"
+	<iostream>
+	<string>
+
+1697592023 source:c:\users\alejandro\desktop\laboratorio_2-main\src\archivo_producto.cpp
+	"Producto.h"
+	"archivo_producto.h"
+	<iostream>
+	<string>
+
+1697592023 source:c:\users\alejandro\desktop\laboratorio_2-main\src\cliente.cpp
+	"Cliente.h"
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1697592023 c:\users\alejandro\desktop\laboratorio_2-main\include\cliente.h
+	<iostream>
+	<string>
+	"Fecha.h"
+	"Persona.h"
+
+1697652837 c:\users\alejandro\desktop\laboratorio_2-main\include\persona.h
+	<iostream>
+	<string>
+	"Fecha.h"
+
+1697592023 source:c:\users\alejandro\desktop\laboratorio_2-main\src\empleado.cpp
+	"Empleado.h"
+	"Fecha.h"
+
+1697592023 c:\users\alejandro\desktop\laboratorio_2-main\include\empleado.h
+	<iostream>
+	<string>
+	"Fecha.h"
+	"Persona.h"
+
+1697592023 source:c:\users\alejandro\desktop\laboratorio_2-main\src\fecha.cpp
+	"Fecha.h"
+
+1697652837 source:c:\users\alejandro\desktop\laboratorio_2-main\src\persona.cpp
+	"Persona.h"
+	"Fecha.h"
+	<string>
+
+1697652526 source:c:\users\alejandro\desktop\laboratorio_2-main\src\producto.cpp
+	"Producto.h"
+	<string>
+
+1697656254 source:c:\users\alejandro\desktop\laboratorio_2-main\funciones.cpp
+	<iostream>
+
+1697656254 c:\users\alejandro\desktop\laboratorio_2-main\funciones.h
+

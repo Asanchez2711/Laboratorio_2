@@ -1,78 +1,72 @@
+
+
 #include<iostream>
 #include<cstring>
-#include<cstdlib>
+#include <cstdlib>
 
 using namespace std;
 
-#include "puntos h/Fecha.h"
-#include "puntos h/Producto.h"
+#include "Fecha.h"
+#include "Producto.h"
+#include "archivo_producto.h"
+#include "funciones.h"
 
 int main (){
 
+bool estado=true;
+int opcion, comprobar;
+comprobar=Login();
+LimpiarPantalla();
+while(estado!=false && comprobar!=0){
 
-string id,contrasena;
+Menu();
+cin>>opcion;
+LimpiarPantalla();
+switch(opcion){
 
-int opcion;
-
-    while(true){
-
-cout<<"**Bienvenido al menu de ventas**"<<endl;
-
-cout<<endl;
-cout<<"Ingrese usuario: "<<endl;
-cin>>id;
-cout<<"Ingrese clave: "<<endl;
-cin>>contrasena;
-
-
-
-
-system("cls");
-
-
-
-if(id=="admin"&&contrasena=="admin"){
-
-        
+    case 1:{
     cout<<endl;
-    cout<<"Bienvenido admin "<<endl;
+    cout<<"Esta por ingresar un producto "<<endl;
+    archivo_producto arch("producto.dat");
     cout<<endl;
-    cout<<"Indique la accion a realizar: "<<endl;
-    cout<<endl;
+    Producto obj;
+    obj.cargar();
+    arch.GuardarProducto(obj);
+    LimpiarPantalla();
+    break;
+}
+    case 3:
 
-    cout<<"1-MODIFICAR PRODUCTO"<<endl;
-    cout<<"2-LISTAR PRODUCTOS"<<endl;
-    cout<<"3-DAR DE BAJA UN PRODUCTO"<<endl;
-    cout<<"4-DAR DE BAJA UN VENDEDOR"<<endl;
-    cout<<"5-DAR DE ALTA UN VENDEDOR"<<endl;
-    cout<<"6-VER IMPORTE RECAUDADO"<<endl;
-    cout<<"7-VER IMPORTE RECAUDADO POR VENDEDOR"<<endl;
-    cout<<"8-DAR DE ALTA UN PRODUCTO"<<endl;
-    cout<<"9-LISTAR VENDEDORES"<<endl;
-    cout<<"10-BUSCAR VENDEDOR"<<endl;
-    cout<<"0-SALIR"<<endl;
-    cin>>opcion;
-    system("cls");
+    break;
+
+    case 4:
+
+    break;
+
+    case 5:
+
+    break;
+
+    case 6:
+
+    break;
+
+    case 7:
+
+    break;
+
+    case 8:{
+    archivo_producto arch("producto.dat");
+    arch.ListarProductos();
+    LimpiaryPausar();
+    break;
+}
+
+    case 0:
+        estado=false;
+    break;
+}
 
 }
-else{
-    cout<<"Contrasenia invalida "<<endl;
-
- system("pause");
-    return -1;
-}
-    if(opcion==1){
-        while (true){
-            int opcionsub1;
-
-            
-
-
-        }
-    }
-
-    }
- system("pause");
-
-
 return 0;}
+

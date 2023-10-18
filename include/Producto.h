@@ -1,6 +1,6 @@
-//#ifndef PRODUCTO_H
-//#define PRODUCTO_H
-#pragma once
+#ifndef PRODUCTO_H
+#define PRODUCTO_H
+
 #include <iostream>
 #include <string>
 
@@ -14,18 +14,17 @@ private:
 
     int _id;
     float _precio;
-    std::string _proveedor;
+    char _proveedor[30];
     class Fecha _fechaAlta;
-    std::string _descripcion;
+    char _descripcion[30];
     int _cantidad;
-    string _color;
-    string _talle;
-    string _marca;
+    char  _color[30];
+    char _talle[30];
+    char _marca[30];
     int _temporada;
     bool _estado;
 
 public:
-    //Producto();
 
     void set_id(int id);
     void set_precio(float precio);
@@ -52,8 +51,10 @@ public:
 
     void cargar();
     void mostrar() const;
-    
+
 
     };
 
-//#endif // PRODUCTO_H
+
+
+#endif // PRODUCTO_H
